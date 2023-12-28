@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: fantasy;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle{
+    height: 180vh;
+    width: 180vh;
+    border-radius: 50%;
+    position: absolute;
+    left: -90vh;
+    top: 50%;
+    transform: translate(0,-50%);
+    border: 2px solid #dadada ;
+}
+
+.stripe{
+    position: absolute;
+    top: 50%;
+    height: 4vmax;
+    width:  100%;
+    left: 50%;
+    transform-origin: 0 50%;
+    transform: translate(0,-50%);
+    display: flex;
+    flex-direction: row
+}
+
+.circle .stripe:nth-child(2){
+    transform: translate(0,-50%) rotate(15deg);
+}
+
+.circle .stripe:nth-child(3){
+    transform: translate(0,-50%) rotate(7.5deg);
+}
+
+.circle .stripe:nth-child(4){
+    transform: translate(0,-50%) rotate(-15deg);
+}
+
+.circle .stripe:nth-child(5){
+    transform: translate(0,-50%) rotate(-7.5deg);
+}
+
+.circle .stripe:nth-child(6){
+    transform: translate(0,-50%) rotate(22.5deg);
+}
+
+.left-side, .right-side{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.right-side > h2, .right-side > h4 {
+    width: 100%;
+    text-align: left;
+    padding-left: 5vmax;
+    font-weight: 500;
+}
+
+.small-circle{
+    height: 1vmax;
+    width: 1vmax;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+    right: -.6vmax;
+    transform: translate(0,-50%);
+}
+
+.panel{
+    width: 3vmax;
+    height: 12vmax;
+    position: absolute;
+    top: 50%;
+    right: 2vmax;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel .panel-btn:nth-child(3){
+    opacity: 1;
+}
+
+.panel-btn{
+    height: 1.5vmax;
+    width: 1.5vmax;
+    border-radius: 50%;
+    background-color: grey;
+    opacity: .4;
+}
+
+.byimaan{
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+.animate-h1{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 4.5vmax;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.animate-h1 span{
+    position: relative;
+    display: block;
+    padding-left: 1vmax;
+    top: -5vmax;
+}
+
+
+
+@media (max-width: 1000px){
+    .circle{
+        height: 180vh;
+        width: 180vh;
+        border-radius: 50%;
+        position: absolute;
+        left: -155vh;
+        top: 50%;
+        transform: translate(0,-50%);
+        border: 2px solid #dadada ;
+    }
+}
